@@ -42,6 +42,8 @@ class TestReview:
             db.session.commit()
 
             # check foreign keys
+            print(type(r.customer_id), r.customer_id)
+            print(type(c.id), c.id)
             assert r.customer_id == c.id
             assert r.item_id == i.id
             # check relationships
